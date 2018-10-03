@@ -1,0 +1,16 @@
+.tl-row:hover.current .tl-highlight,
+.tl-row.contextmenu-active.current .tl-highlight,
+.tl-row.current .tl-cell:not(.tl-number),
+.tl-row.current .tl-cell a:link,
+.tl-row.current .tl-highlight {
+  color: $primary;
+}
+
+[dir] .nav > li.active > a::after {
+  background-color: $primary-dark;
+}
+
+.tl-sort-asc::after,
+.tl-sort-desc::after {
+  color: $primary-dark;
+}

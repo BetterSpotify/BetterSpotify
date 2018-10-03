@@ -1,0 +1,8 @@
+[dir] .SidebarListItem--is-active:after,
+[dir] .RootlistItem--is-active:after {
+  background-color: $primary;
+}
+
+.OfflineIndicator--is-downloaded {
+  color: $primary-dark;
+}

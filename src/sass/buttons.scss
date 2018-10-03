@@ -1,0 +1,12 @@
+.button.button-icon-only.active {
+  color: $primary;
+}
+
+[dir] .button.button-green {
+  background-color: $primary-dark;
+}
+
+.button.button-green.contextmenu-active,
+[dir] .button.button-green:not(:disabled):hover {
+  background-color: $primary;
+}

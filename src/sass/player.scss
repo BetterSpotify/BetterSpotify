@@ -1,0 +1,28 @@
+.view-player .player-controls-container .controls .button-repeat.active,
+.view-player .player-controls-container .controls .button-shuffle.active,
+.view-player .player-controls-container .controls .button-thumbs-down.active,
+.view-player .player-controls-container .controls .button-thumbs-up.active {
+  color: $primary;
+}
+[dir] .view-player .player-controls-container .button-repeat.active:after,
+[dir] .view-player .player-controls-container .button-shuffle.active:after {
+  background-color: $primary-dark;
+}
+
+[dir] .progress-bar .inner {
+  background: $primary;
+}
+[dir]
+  .view-player
+  .player-controls-container
+  .progress-container.progress-bar-enabled.dragging-progress-bar
+  .progress-bar
+  .inner,
+[dir]
+  .view-player
+  .player-controls-container
+  .progress-container.progress-bar-enabled:hover
+  .progress-bar
+  .inner {
+  background-color: $primary-dark;
+}

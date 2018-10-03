@@ -1,0 +1,16 @@
+/*$primary-darker: #18ac4d;
+$primary-dark: #1db954;
+$primary: #1ed760;
+$primary-light: #1df369;*/
+
+/*$primary-darker: #18ac4d;
+$primary-dark: #616161;
+$primary: #5F3DC4;
+$primary-light: #1df369;
+$primary-lighter: #1df369;*/
+
+$primary: #871ed7;
+$primary-darker: darken($primary, 10%);
+$primary-dark: darken($primary, 2%);
+$primary-light: lighten($primary, 10%);
+$primary-lighter: lighten($primary, 15%);

@@ -1,0 +1,12 @@
+.card.playing .card-info-title a,
+.card.paused .card-info-title a,
+.playing .card .card-info-title a,
+.paused .card .card-info-title a {
+  color: $primary-dark;
+}
+.card.playing .card-info-title,
+.card.paused .card-info-title,
+.playing .card .card-info-title,
+.paused .card .card-info-title {
+  color: $primary-dark;
+}

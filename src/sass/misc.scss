@@ -1,0 +1,6 @@
+/*** Connect Prompt ***/
+.ConnectPopup__device--active,
+.ConnectPopup__device--active .ConnectPopup__device-info,
+.ConnectPopup__device--active .ConnectPopup__device-title {
+  color: $primary-dark;
+}
