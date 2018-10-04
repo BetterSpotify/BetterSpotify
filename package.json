@@ -1,5 +1,5 @@
 {
-  "name": "spotify",
+  "name": "@customspotify/customspotify",
   "version": "1.0.0",
   "main": "src/index.js",
   "license": "GPL-3.0-only",
