@@ -1,0 +1,19 @@
+[dir] .sidebar,
+[dir] .sidebar .sidebar-navbar.sidebar-scroll-element {
+  background-color: $bg-1;
+}
+
+.SidebarListItemLink--is-highlighted:hover,
+.SidebarListItemLink--is-highlighted:link,
+.SidebarListItemLink--is-highlighted:visited {
+  color: $text-color-darker;
+}
+.SidebarListItemLink:link,
+.SidebarListItemLink:visited {
+  color: $text-color;
+}
+
+.LeftSidebarNewPlaylistButton__button,
+.SidebarList__title {
+  color: $text-color-darker;
+}

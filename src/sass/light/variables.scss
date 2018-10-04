@@ -1,0 +1,25 @@
+/*$bg-primary: #121212; // #121212
+
+$bg-1: $bg-primary;
+$bg-2: #181818; // #181818
+$bg-3: #282828; // #282828
+$bg-4: #333333; // #333333
+$bg-5: #404040; // #404040
+$bg-6: #535353; // #535353*/
+
+//$bg-primary: #f3f3f4;
+$bg-primary: #ffffff;
+$bg-1: $bg-primary;
+$bg-2: darken($bg-1, 5%);
+$bg-3: darken($bg-2, 5%);
+$bg-4: darken($bg-3, 5%);
+$bg-5: darken($bg-4, 5%);
+$bg-6: darken($bg-5, 5%);
+
+$text-color: #282828;
+$text-color-darker: #121212;
+$text-color-dark: $text-color;
+$text-color-light: $text-color;
+$text-color-lighter: $text-color;
+
+$link-color: darken($bg-1, 45%);

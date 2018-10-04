@@ -1,0 +1,49 @@
+[dir] .glue-page-header__background-color {
+  background: $bg-2;
+}
+[dir] .glue-page-header__background-scroll-overlay,
+[dir] .glue-page-header__background-overlay {
+  background: none;
+}
+
+.glue-page-header__content .glue-page-header__label,
+.glue-page-header__content .glue-page-header__title {
+  color: $text-color-darker;
+}
+[dir] .glue-page-header__content .glue-page-header__meta-info {
+  color: $text-color;
+}
+a {
+  color: $link-color;
+}
+.tl-highlight {
+  color: $text-color-darker;
+}
+[dir] .tl-row:hover .tl-cell,
+.tl-row.contextmenu-active .tl-cell,
+[dir] .tl-row.selected .tl-cell {
+  background: $bg-4;
+}
+.tl-row:hover .tl-highlight,
+.tl-row.contextmenu-active .tl-highlight,
+.tl-row:hover .tl-more .button:not([disabled])::before,
+.tl-row:hover .tl-save .button:not([disabled])::before,
+.tl-row.contextmenu-active .tl-more .button:not([disabled])::before,
+.tl-row.contextmenu-active .tl-save .button:not([disabled])::before {
+  color: $text-color-darker;
+}
+
+.added .button-add.button-icon-only::before,
+.added .button-add.button-icon-with-stroke::before,
+.button-add.added.button-icon-only::before,
+.button-add.added.button-icon-with-stroke::before {
+  color: $primary;
+}
+
+.glue-page-header__content .glue-page-header__count-label-text {
+  color: $text-color-darker;
+}
+.glue-page-header__content .glue-page-header__count-label-number {
+  color: $text-color-darker;
+  font-weight: 600;
+}

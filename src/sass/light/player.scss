@@ -1,0 +1,76 @@
+[dir] .view-player {
+  background-color: $bg-3;
+}
+
+.view-player .player-controls-container .controls .button-play {
+  color: $text-color-darker;
+}
+
+.view-player,
+.view-player .player-controls-container .controls .next,
+.view-player .player-controls-container .controls .previous {
+  color: $text-color;
+}
+
+.view-player .player-controls-container .progress-container .elapsed,
+.view-player .player-controls-container .progress-container .remaining,
+[dir]
+  .view-player
+  .extra-controls-container
+  .volumebar-container
+  .progress-bar
+  .inner {
+  color: $text-color-darker;
+}
+
+.view-player .extra-controls-container .button-devices,
+.view-player .extra-controls-container .button-lyrics,
+.view-player .extra-controls-container .button-queue,
+.view-player .extra-controls-container .button-subtitles {
+  color: $text-color-darker;
+}
+
+[dir]
+  .view-player
+  .player-controls-container
+  .progress-container
+  .progress-bar
+  .inner {
+  background-color: $text-color-darker;
+}
+
+[dir] .progress-bar,
+[dir] .progress-bar .inner {
+  background: $bg-6;
+}
+
+[dir="ltr"]
+  .view-player
+  .text-container
+  .text-item-container
+  .text-item
+  .scroll-text-container:after,
+[dir="rtl"]
+  .view-player
+  .text-container
+  .text-item-container
+  .text-item
+  .scroll-text-container:before {
+  background: linear-gradient(90deg, transparent, $bg-3);
+}
+[dir="ltr"]
+  .view-player
+  .text-container
+  .text-item-container
+  .text-item
+  .scroll-text-container:before {
+  background: linear-gradient(270deg, transparent, $bg-3);
+}
+
+.view-player .track a {
+  color: $text-color-darker;
+}
+.view-player .artist,
+.view-player .artist a {
+  color: $text-color-lighter;
+}

@@ -9,8 +9,30 @@ $primary: #5F3DC4;
 $primary-light: #1df369;
 $primary-lighter: #1df369;*/
 
-$primary: #871ed7;
+$base-dark-text-color: #000000;
+$base-light-text-color: #ffffff;
+
+@function calculate-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return $base-dark-text-color;
+  } @else {
+    @return $base-light-text-color;
+  }
+}
+
+//$primary: #871ed7; // Purple
+//$primary: #e1311a; // Red
+//$primary: #0b76ff; // Blue
+$primary: #3273dc; // Auttaja Blue
+//$primary: #ffffff; // White (for contrast testing, text-colors should be set to the base dark text color.)
+//$primary: #000000; // Black (for contrast testing, text-colors should be set to the base light text color.)
 $primary-darker: darken($primary, 10%);
 $primary-dark: darken($primary, 2%);
 $primary-light: lighten($primary, 10%);
 $primary-lighter: lighten($primary, 15%);
+
+$text-color: calculate-text-color($primary);
+$text-color-darker: calculate-text-color($primary-darker);
+$text-color-dark: calculate-text-color($primary-dark);
+$text-color-light: calculate-text-color($primary-light);
+$text-color-lighter: calculate-text-color($primary-lighter);

@@ -8,6 +8,7 @@
 
 [dir] .nav > li.active > a::after {
   background-color: $primary-dark;
+  color: $text-color-dark;
 }
 
 .tl-sort-asc::after,

@@ -1,0 +1,15 @@
+.profile {
+  color: $text-color-darker;
+}
+[dir="ltr"] .profile {
+  text-shadow: none;
+}
+.content-top-bar__profile-menu-button .dropdown > button,
+.content-top-bar__profile-menu-button .dropdown > button.contextmenu-active,
+.content-top-bar__profile-menu-button .dropdown > button:not(:disabled):hover {
+  color: $text-color-darker;
+}
+
+[dir="ltr"] .dropdown > button {
+  text-shadow: none;
+}

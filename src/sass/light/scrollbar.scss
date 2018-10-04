@@ -1,0 +1,36 @@
+[dir]
+  .scrollbar-style-visible-mac
+  .sidebar
+  .sidebar-navbar.sidebar-scroll-element::-webkit-scrollbar-button,
+[dir]
+  .scrollbar-style-visible-mac
+  .sidebar
+  .sidebar-navbar.sidebar-scroll-element::-webkit-scrollbar-track,
+[dir]
+  .scrollbar-style-visible-windows
+  .sidebar
+  .sidebar-navbar.sidebar-scroll-element::-webkit-scrollbar-button,
+[dir]
+  .scrollbar-style-visible-windows
+  .sidebar
+  .sidebar-navbar.sidebar-scroll-element::-webkit-scrollbar-track {
+  background-color: $bg-1;
+}
+
+[dir] .scrollbar-style-visible-mac ::-webkit-scrollbar-track,
+[dir] .scrollbar-style-visible-mac::-webkit-scrollbar-track,
+[dir] .scrollbar-style-visible-windows ::-webkit-scrollbar-track,
+[dir] .scrollbar-style-visible-windows::-webkit-scrollbar-track,
+[dir] .scrollbar-style-visible-linux ::-webkit-scrollbar-track,
+[dir] .scrollbar-style-visible-linux::-webkit-scrollbar-track {
+  background-color: $bg-2;
+}
+
+[dir] .scrollbar-style-visible-mac::-webkit-scrollbar-thumb,
+[dir] .scrollbar-style-visible-mac ::-webkit-scrollbar-thumb,
+[dir] .scrollbar-style-visible-windows::-webkit-scrollbar-thumb,
+[dir] .scrollbar-style-visible-windows ::-webkit-scrollbar-thumb,
+[dir] .scrollbar-style-visible-linux::-webkit-scrollbar-thumb,
+[dir] .scrollbar-style-visible-linux ::-webkit-scrollbar-thumb {
+  background-color: $bg-6;
+}

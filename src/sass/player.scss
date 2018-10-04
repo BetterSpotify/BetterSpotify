@@ -7,10 +7,12 @@
 [dir] .view-player .player-controls-container .button-repeat.active:after,
 [dir] .view-player .player-controls-container .button-shuffle.active:after {
   background-color: $primary-dark;
+  color: $text-color-dark;
 }
 
 [dir] .progress-bar .inner {
   background: $primary;
+  color: $text-color;
 }
 [dir]
   .view-player
@@ -25,4 +27,5 @@
   .progress-bar
   .inner {
   background-color: $primary-dark;
+  color: $text-color-dark;
 }

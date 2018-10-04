@@ -4,9 +4,11 @@
 
 [dir] .button.button-green {
   background-color: $primary-dark;
+  color: $text-color-dark;
 }
 
 .button.button-green.contextmenu-active,
 [dir] .button.button-green:not(:disabled):hover {
   background-color: $primary;
+  color: $text-color;
 }
