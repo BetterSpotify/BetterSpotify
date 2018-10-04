@@ -11,8 +11,7 @@ let observer = new MutationObserver(mutations => {
     mutation.addedNodes.forEach(addedNode => {
       if (addedNode.nodeName === "IFRAME") {
         addedNode.onload = () => {
-          const script = addedNode.contentDocument.createElement("script");
-          script.src = "http://localhost:8161/injector.js";
+          const script = document.querySelector("#customspotify-script");
           addedNode.contentDocument
             .getElementsByTagName("head")[0]
             .appendChild(script);
