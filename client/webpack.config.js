@@ -27,5 +27,10 @@ module.exports = {
     new webpack.DefinePlugin({
       __BUILDTIME_STYLES__: `\`${fs.readFileSync(STYLE_PATH, "utf8")}\``
     })
-  ]
+  ],
+  performance: {
+    maxEntrypointSize: 400000,
+    maxAssetSize: 1000000
+  }
+  //entry: ["@babel/polyfill", "./src/index.js"]
 };

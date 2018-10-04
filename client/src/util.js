@@ -18,4 +18,6 @@ Util.topFrame = top;
 Util.zlinkRequire = top.zlink_require;
 Util.zlinkModules = top.zlink_modules;
 
+Util.me = "";
+
 module.exports = Util;
