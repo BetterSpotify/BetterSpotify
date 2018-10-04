@@ -1,6 +1,7 @@
 # CustomSpotify
-Customize your Spotify using CSS
+Customize your Spotify using CSS.
 
+[Join our Discord](https://discord.gg/TRxwZXc)
 ## Disclaimer
 We are not trying to infringe upon Spotify's trademarks and copyrights.
 
