@@ -1,7 +1,7 @@
 import Util from "./util";
 import { Mirror, Components } from "./mirror/index";
 require("./init")();
-if (process.env.NODE_ENV === "development") {
+if (Util.inDev) {
   require("./development");
 }
 
@@ -55,7 +55,9 @@ if (Util.inFrame) {
   });
 } else {
   if (Util.me === "") {
-    fetch("https://zlink.app.spotify.com/injector.js")
+    let url = "https://zlink.app.spotify.com/injector.js";
+    if (Util.inDev) url = "http://localhost:8161/injector.js";
+    fetch(url)
       .then(res => res.text())
       .then(js => {
         Util.me = js;

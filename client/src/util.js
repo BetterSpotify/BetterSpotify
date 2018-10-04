@@ -11,6 +11,8 @@ Util.injectStyles = styles => {
   return el;
 };
 
+Util.inDev = process.env.NODE_ENV === "development";
+
 Util.inFrame = self !== top;
 
 Util.topFrame = top;
