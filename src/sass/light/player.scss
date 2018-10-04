@@ -13,14 +13,16 @@
 }
 
 .view-player .player-controls-container .progress-container .elapsed,
-.view-player .player-controls-container .progress-container .remaining,
+.view-player .player-controls-container .progress-container .remaining {
+  color: $text-color-darker;
+}
 [dir]
   .view-player
   .extra-controls-container
   .volumebar-container
   .progress-bar
   .inner {
-  color: $text-color-darker;
+  background-color: $text-color-darker;
 }
 
 .view-player .extra-controls-container .button-devices,
@@ -73,4 +75,7 @@
 .view-player .artist,
 .view-player .artist a {
   color: $text-color-lighter;
+}
+[dir] .view-player {
+  border-top-color: $border-color;
 }

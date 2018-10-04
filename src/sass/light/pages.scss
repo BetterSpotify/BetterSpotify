@@ -2,3 +2,17 @@
 [dir] #view-content {
   background-color: $bg-2;
 }
+
+.account-info__profile-info-name {
+  color: $text-color-darker;
+}
+[dir] .account-info__profile-info-product {
+  color: $text-color-lighter;
+}
+.section-divider,
+.section-divider > * {
+  color: $text-color-darker;
+}
+.section-divider {
+  border-bottom-color: $border-color !important;
+}

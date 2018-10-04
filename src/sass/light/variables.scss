@@ -23,3 +23,6 @@ $text-color-light: $text-color;
 $text-color-lighter: $text-color;
 
 $link-color: darken($bg-1, 45%);
+
+//$border-color: lighten($bg-6%);
+$border-color: rgba(0, 0, 0, 0.06);

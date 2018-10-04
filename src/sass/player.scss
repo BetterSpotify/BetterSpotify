@@ -29,3 +29,12 @@
   background-color: $primary-dark;
   color: $text-color-dark;
 }
+[dir]
+  .view-player
+  .extra-controls-container
+  .volumebar-container
+  .progress-bar-wrapper.active
+  .inner,
+[dir] .view-player .extra-controls-container .volumebar-container:hover .inner {
+  background-color: $primary-dark;
+}

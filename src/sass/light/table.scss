@@ -4,3 +4,7 @@
 .tl-header th {
   color: $text-color-darker;
 }
+[dir] .tl-header th,
+[dir] .tl-cell {
+  border-top-color: $border-color;
+}

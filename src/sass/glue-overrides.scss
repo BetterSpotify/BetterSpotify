@@ -1,0 +1,5 @@
+.button.button-icon-only.active.contextmenu-active,
+.button.button-icon-only.active:not(:disabled):hover,
+.button.button-icon-only.active {
+  color: $primary-darker;
+}

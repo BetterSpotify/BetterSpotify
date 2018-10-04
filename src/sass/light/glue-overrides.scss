@@ -1,27 +1,41 @@
-[dir] .glue-page-header__background-color {
-  background: $bg-2;
+[dir] .glue-page-header__background-color,
+[dir] .Header__background-color {
+  background: $bg-2 !important; // important because of Spotify.
 }
 [dir] .glue-page-header__background-scroll-overlay,
-[dir] .glue-page-header__background-overlay {
+[dir] .glue-page-header__background-overlay,
+[dir] .Header__background-overlay,
+[dir] .Header__background-scroll-overlay {
   background: none;
 }
 
 .glue-page-header__content .glue-page-header__label,
-.glue-page-header__content .glue-page-header__title {
+.glue-page-header__content .glue-page-header__title,
+.Header__content .Header__title-text,
+.Header__label {
   color: $text-color-darker;
 }
-[dir] .glue-page-header__content .glue-page-header__meta-info {
+[dir] .glue-page-header__content .glue-page-header__meta-info,
+[dir] .AlbumMetaInfo__artists,
+[dir] .AlbumMetaInfo {
   color: $text-color;
 }
 a {
   color: $link-color;
 }
-.tl-highlight {
+.Button--style-icon:not(.Button--is-drop-target-active) {
+  color: $text-color-darker;
+}
+.tl-highlight,
+.TableCell {
   color: $text-color-darker;
 }
 [dir] .tl-row:hover .tl-cell,
 .tl-row.contextmenu-active .tl-cell,
-[dir] .tl-row.selected .tl-cell {
+[dir] .tl-row.selected .tl-cell,
+[dir] .TableRow--is-hover-forced,
+[dir] .TableRow:hover,
+[dir] .TableRow--is-selected {
   background: $bg-4;
 }
 .tl-row:hover .tl-highlight,
@@ -29,7 +43,8 @@ a {
 .tl-row:hover .tl-more .button:not([disabled])::before,
 .tl-row:hover .tl-save .button:not([disabled])::before,
 .tl-row.contextmenu-active .tl-more .button:not([disabled])::before,
-.tl-row.contextmenu-active .tl-save .button:not([disabled])::before {
+.tl-row.contextmenu-active .tl-save .button:not([disabled])::before,
+.TableCell--is-emphasized {
   color: $text-color-darker;
 }
 
@@ -46,4 +61,49 @@ a {
 .glue-page-header__content .glue-page-header__count-label-number {
   color: $text-color-darker;
   font-weight: 600;
+}
+.glue-page-header__sticky .glue-page-header__title {
+  color: $text-color-darker;
+}
+
+[dir] .tracklist-album,
+[dir] .tracklist-chart,
+[dir] .tracklist-basic,
+[dir] .tracklist-playlist,
+[dir] .tracklist-podcast,
+[dir] .tracklist-popular,
+[dir] .tracklist-station,
+[dir] .tracklist-queue,
+[dir] .tracklist-search,
+[dir]
+  .glue-page-header--with-active-sticky-header
+  .glue-page-header__background {
+  border-bottom-color: $border-color;
+}
+
+[dir] #view-content > .embedded-app,
+[dir] #view-content > iframe {
+  background-color: $bg-2;
+}
+
+[dir="ltr"] .TableCellPopularity__popularity-meter-overlay:after {
+  box-shadow: 4px 0 0 0 $text-color-darker, 8px 0 0 0 $text-color-darker,
+    12px 0 0 0 $text-color-darker, 16px 0 0 0 $text-color-darker,
+    20px 0 0 0 $text-color-darker, 24px 0 0 0 $text-color-darker,
+    28px 0 0 0 $text-color-darker, 32px 0 0 0 $text-color-darker;
+}
+[dir="ltr"] .TableCellPopularity__popularity-meter-background:after {
+  box-shadow: 4px 0 0 0 $bg-6, 8px 0 0 0 $bg-6, 12px 0 0 0 $bg-6,
+    16px 0 0 0 $bg-6, 20px 0 0 0 $bg-6, 24px 0 0 0 $bg-6, 28px 0 0 0 $bg-6,
+    32px 0 0 0 $bg-6;
+}
+
+.card-info-title a {
+  color: $text-color-darker;
+}
+.card-info-subtitle-description {
+  color: $text-color-lighter;
+}
+.card-info-subtitle-metadata {
+  color: rgba($text-color-lighter, 0.8);
 }

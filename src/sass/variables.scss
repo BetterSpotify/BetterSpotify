@@ -20,10 +20,10 @@ $base-light-text-color: #ffffff;
   }
 }
 
-//$primary: #871ed7; // Purple
+$primary: #871ed7; // Purple
 //$primary: #e1311a; // Red
 //$primary: #0b76ff; // Blue
-$primary: #3273dc; // Auttaja Blue
+//$primary: #3273dc; // Auttaja Blue
 //$primary: #ffffff; // White (for contrast testing, text-colors should be set to the base dark text color.)
 //$primary: #000000; // Black (for contrast testing, text-colors should be set to the base light text color.)
 $primary-darker: darken($primary, 10%);
