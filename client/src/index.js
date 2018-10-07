@@ -1,10 +1,12 @@
 import Util from "./util";
 import registerObserver from "./registerObserver";
 import injectSidebar from "./injectSidebar";
+import injectWatcher from "./injectWatcher";
 import initScript from "./init";
 initScript();
 registerObserver();
 injectSidebar(); // Don't await this! this hangs the main thread.
+injectWatcher();
 if (Util.inDev) {
   require("./development");
 }
