@@ -2,16 +2,11 @@ import React, { PureComponent } from "react";
 import { Mirror, Classes } from "../mirror/index";
 import classNames from "classnames";
 import { connect } from "react-redux";
-
+import connectWithStore from "./connectWithStore";
 const mapStateToProps = state => ({
   lastRequestedPageUri: state.pages.lastRequestedPageUri
 });
-function connectWithStore(store, WrappedComponent, ...args) {
-  var ConnectedWrappedComponent = connect(...args)(WrappedComponent);
-  return function(props) {
-    return <ConnectedWrappedComponent {...props} store={store} />;
-  };
-}
+
 class _SidebarListItem extends PureComponent {
   render() {
     const { title, url, lastRequestedPageUri } = this.props;
