@@ -2,6 +2,7 @@ import React, { PureComponent } from "react";
 import { Mirror, Classes } from "../mirror/index";
 import connectWithStore from "./connectWithStore";
 
+import Settings from "../pages/Settings.jsx";
 const mapStateToProps = state => ({
   lastRequestedPageUri: state.pages.lastRequestedPageUri
 });
@@ -19,7 +20,8 @@ class Watcher extends PureComponent {
     if (lastRequestedPageUri !== "spotify:app:customspotify_settings") {
       return null;
     }
-    return <div>We're on the CustomSpotify settings page.</div>;
+    return <Settings />;
+    //return <div>We're on the CustomSpotify settings page.</div>;
   }
 }
 
