@@ -1,14 +1,18 @@
 import Util from "./util";
+import Registrar from "./Registrar";
 import registerFrameObserver from "./registerFrameObserver";
 import registerObserver from "./registerObserver";
 import injectSidebar from "./injectSidebar";
 import injectWatcher from "./injectWatcher";
 import initScript from "./init";
+import Settings from "./pages/Settings.jsx";
+
 initScript();
 registerObserver();
 registerFrameObserver();
 injectSidebar(); // Don't await this! this hangs the main thread.
 injectWatcher();
+//Registrar.registerPageOverwrite("spotify:app:customspotify_settings", Settings);
 if (Util.inDev) {
   require("./development");
 }
