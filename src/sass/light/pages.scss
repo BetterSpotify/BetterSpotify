@@ -16,3 +16,20 @@
 .section-divider {
   border-bottom-color: $border-color !important;
 }
+[dir] .TableCell {
+  border-top-color: $border-color;
+}
+[dir] .Table__sticky-header-table,
+[dir] .Table__table {
+  border-bottom-color: $border-color;
+}
+.TableCellSong--track-is-playing .TableCellSong__featuredArtist,
+.TableCellSong--track-is-playing .TableCellSong__text-truncator,
+.TableCellSong--track-is-playing .TableCellSong__track-name,
+.TableCellArtists--track-is-playing,
+.TableCellArtists--track-is-playing .TableCellArtists__artist {
+  color: $primary;
+}
+[dir] .Button--style-green {
+  background: $primary;
+}

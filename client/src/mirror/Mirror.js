@@ -60,9 +60,30 @@ export default class Mirror {
       module: Util.zlinkRequire(index)
     };
   }
-
+  static getStore() {
+    return this.findModule(Filters.Exists(), Filters.Has.String("createStore"))
+      .default;
+  }
   static findModule(...args) {
     return this._intFindModule(...args).module;
+  }
+  /**
+   * Wait for a selector to appear in the DOM (with timeout defaulting to 1000ms)
+   * @param {string} selector - CSS selector (document.querySelector)
+   * @param {number} [timeout=1000] - Timeout in milliseconds
+   */
+  static waitForSelector(selector, timeout) {
+    return new Promise((resolve, reject) => {
+      let breakOut = false;
+      setTimeout(() => {
+        breakOut = true;
+        reject(false);
+      }, timeout);
+      while (!breakOut && document.querySelector(selector) === null) {}
+      if (!breakOut) {
+        return resolve(document.querySelector(selector));
+      }
+    });
   }
 }
 window.CSMirror = Mirror;

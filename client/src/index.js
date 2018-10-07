@@ -1,47 +1,13 @@
 import Util from "./util";
-import { Mirror, Components } from "./mirror/index";
-require("./init")();
+import registerObserver from "./registerObserver";
+import injectSidebar from "./injectSidebar";
+import initScript from "./init";
+initScript();
+registerObserver();
+injectSidebar(); // Don't await this! this hangs the main thread.
 if (Util.inDev) {
   require("./development");
 }
-
-function registerObserver() {
-  let observer = new MutationObserver(mutations => {
-    mutations.forEach(mutation => {
-      mutation.addedNodes.forEach(addedNode => {
-        if (addedNode.nodeName === "IFRAME") {
-          addedNode.onload = () => {
-            const script = document.createElement("script");
-            script.innerHTML = Util.me;
-            if (!Util.inFrame) {
-              const loaded = () => {
-                addedNode.contentWindow.postMessage(
-                  JSON.stringify({
-                    event: "ME",
-                    payload: Util.me
-                  }),
-                  "*"
-                );
-              };
-              script.onload = loaded;
-              setTimeout(loaded, 500);
-            }
-
-            addedNode.contentDocument
-              .getElementsByTagName("head")[0]
-              .appendChild(script);
-            console.log("Injected self into new iframe");
-          };
-        }
-      });
-    });
-  });
-  observer.observe(document.body, {
-    childList: true,
-    subtree: true
-  });
-}
-
 if (Util.inFrame) {
   window.addEventListener("message", e => {
     try {

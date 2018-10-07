@@ -1,6 +1,6 @@
 import Util from "./util";
 
-module.exports = () => {
+export default async () => {
   if (Util.inDev) {
     let link = document.createElement("link");
     link.rel = "stylesheet";
