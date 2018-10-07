@@ -39,7 +39,6 @@ class _SidebarListItem extends PureComponent {
     );
   }
 }
-//const SidebarListItem = connect(mapStateToProps)(_SidebarListItem);
 const SidebarListItem = connectWithStore(
   Mirror.getStore(),
   _SidebarListItem,
