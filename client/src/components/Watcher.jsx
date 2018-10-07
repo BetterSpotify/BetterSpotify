@@ -1,8 +1,6 @@
 import React, { PureComponent } from "react";
-import { Mirror, Classes } from "../mirror/index";
 import connectWithStore from "./connectWithStore";
 import Registrar from "../Registrar";
-import Settings from "../pages/Settings.jsx";
 const mapStateToProps = state => ({
   lastRequestedPageUri: state.pages.lastRequestedPageUri,
   pages: state.pages
