@@ -1,4 +1,5 @@
 import { Mirror, Classes, Elements } from "./mirror";
+import ReactDOM from "react-dom";
 import Sidebar from "./components/Sidebar.jsx";
 import Util from "./util";
 
