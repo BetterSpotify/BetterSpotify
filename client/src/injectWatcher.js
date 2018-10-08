@@ -1,10 +1,10 @@
 import Watcher from "./components/Watcher.jsx";
 import { Mirror } from "./mirror";
 import Util from "./util";
-import insertAfter from './insertAfter';
+import insertAfter from "./insertAfter";
 export default async () => {
   if (!Util.inFrame) {
-    document.addEventListener("readystatechange", e => {
+    document.addEventListener("readystatechange", async e => {
       if (document.readyState !== "complete") return;
       let insertionPoint = await Mirror.waitForSelector(
         `#view-content > a#content-anchor`
