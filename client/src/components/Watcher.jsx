@@ -16,7 +16,6 @@ const initialContent = `
 
   <link href="https://browse.app.spotify.com/css/glue.css" rel="stylesheet">
   <link href="https://browse.app.spotify.com/css/main.css" rel="stylesheet">
-  <script type="text/javascript" src="https://browse.app.spotify.com/browse.bundle.js"></script>
 
 </head>
 
