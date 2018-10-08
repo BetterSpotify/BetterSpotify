@@ -7,6 +7,7 @@ import insertAfter from "./insertAfter";
 export default async () => {
   if (!Util.inFrame) {
     document.addEventListener("readystatechange", async e => {
+      if (document.readyState !== "complete") return;
       let firstSidebarList = await Mirror.waitForSelector(
         `.${Classes.Sidebar.LeftSidebar} > .${
           Classes.Sidebar.LeftSidebar__section
