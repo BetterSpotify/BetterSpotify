@@ -5,6 +5,14 @@ const DEFAULT_OVERWRITES = {
     component: Settings
   }
 };
+
+const DEFAULT_SIDEBAR_ITEMS = {
+  "spotify:app:customspotify_settings": {
+    title: "Settings",
+    url: "spotify:app:customspotify_settings"
+  }
+};
+
 export default class Registar {
   static pageOverwrites = {};
   static registerPageOverwrite(page, component) {
@@ -22,5 +30,23 @@ export default class Registar {
   static pageOverwriteExists(page) {
     if (typeof DEFAULT_OVERWRITES[page] !== "undefined") return true;
     return typeof this.pageOverwrites[page] !== "undefined";
+  }
+
+  static sidebarItems = [];
+  static defaultSidebarItems = DEFAULT_SIDEBAR_ITEMS;
+  static registerSidebarItem(title, url) {
+    this.sidebarItems.push({
+      title,
+      url
+    });
+    return this;
+  }
+  static getSidebarItem(url) {
+    if (DEFAULT_SIDEBAR_ITEMS[url]) return DEFAULT_SIDEBAR_ITEMS[url];
+    return this.sidebarItems.find(item => item.url === url);
+  }
+  static sidebarItemExists(url) {
+    if (typeof DEFAULT_SIDEBAR_ITEMS[url] !== "undefined") return true;
+    return typeof this.getSidebarItem(url) !== "undefined";
   }
 }
