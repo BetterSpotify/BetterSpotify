@@ -1,4 +1,5 @@
 import Util from "./util";
+import Registrar from "./Registrar";
 import { Mirror } from "./mirror";
 export default async () => {
   if (Util.inFrame) return;
@@ -7,13 +8,11 @@ export default async () => {
       if (mutation.type !== "attributes") return;
       const store = Mirror.getStore();
       let lastRequestedPageUri = store.getState().pages.lastRequestedPageUri;
-      if (lastRequestedPageUri === "spotify:app:customspotify_settings") {
-        let ele = await Mirror.waitForSelector(
-          `iframe[src="${lastRequestedPageUri}"]`
-        );
-        console.log("Removed class from cssettings");
-        ele.classList.remove("active");
-      }
+      if (!Registrar.pageOverwriteExists(lastRequestedPageUri)) return;
+      let ele = await Mirror.waitForSelector(
+        `iframe[src="${lastRequestedPageUri}"]`
+      );
+      ele.classList.remove("active");
     });
   });
   observer.observe(
