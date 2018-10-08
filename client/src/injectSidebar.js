@@ -2,12 +2,11 @@ import { Mirror, Classes, Elements } from "./mirror";
 import ReactDOM from "react-dom";
 import Sidebar from "./components/Sidebar.jsx";
 import Util from "./util";
-
-import $ from "jquery";
+import insertAfter from "./insertAfter";
 
 export default async () => {
   if (!Util.inFrame) {
-    $(document).ready(async () => {
+    document.addEventListener("readystatechange", async e => {
       let firstSidebarList = await Mirror.waitForSelector(
         `.${Classes.Sidebar.LeftSidebar} > .${
           Classes.Sidebar.LeftSidebar__section
@@ -24,7 +23,7 @@ export default async () => {
         </Sidebar>
       );
       ReactDOM.render(sidebar, sidebarContainer);
-      $(sidebarContainer).insertAfter(firstSidebarList);
+      insertAfter(sidebarContainer, firstSidebarList);
     });
   }
 };

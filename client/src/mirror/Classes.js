@@ -40,6 +40,17 @@ const Glue = {
     "sticky-top": "sticky-top",
     "glue-page-header__sticky-inner": "glue-page-header__sticky-inner"
   },
+  Content: {
+    container: "container",
+    "mixes-container": "mixes-container",
+    "app-content": "app-content"
+  },
+  Row: {
+    row: "row",
+    "section-divider": "section-divider",
+    "section-title": "section-title",
+    "standard-grid": "standard-grid"
+  },
   container: "container"
 };
 

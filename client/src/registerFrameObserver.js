@@ -1,6 +1,5 @@
 import Util from "./util";
 import { Mirror } from "./mirror";
-import $ from "jquery";
 export default async () => {
   if (Util.inFrame) return;
   let observer = new MutationObserver(mutations => {
@@ -13,7 +12,7 @@ export default async () => {
           `iframe[src="${lastRequestedPageUri}"]`
         );
         console.log("Removed class from cssettings");
-        $(ele).removeClass("active");
+        ele.classList.remove("active");
       }
     });
   });

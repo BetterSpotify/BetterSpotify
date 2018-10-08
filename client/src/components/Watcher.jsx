@@ -1,17 +1,29 @@
 import React, { PureComponent } from "react";
 import connectWithStore from "./connectWithStore";
 import Registrar from "../Registrar";
+import Frame from "react-frame-component";
+
 const mapStateToProps = state => ({
   lastRequestedPageUri: state.pages.lastRequestedPageUri,
   pages: state.pages
 });
+const initialContent = `
+<!doctype html>
+<html dir="ltr" lang="en">
 
-const activeClass = {
-  position: "absolute",
-  height: "100%",
-  top: 0,
-  width: "100%"
-};
+<head>
+  <meta charset="utf-8">
+
+  <link href="https://browse.app.spotify.com/css/glue.css" rel="stylesheet">
+  <link href="https://browse.app.spotify.com/css/main.css" rel="stylesheet">
+  <script src="https://browse.app.spotify.com/browse.bundle.js"></script>
+
+</head>
+
+<body class="body-container--mac body-container--rtl-off is-main-content-page-iframe scrollbar-style-visible-mac"
+  data-top-bar-height="48" id="app-mount"></body>
+
+</html>`;
 
 class Watcher extends PureComponent {
   render() {
@@ -22,7 +34,15 @@ class Watcher extends PureComponent {
     }
     let pageOverwrite = Registrar.getPageOverwrite(lastRequestedPageUri);
     let Component = pageOverwrite.component;
-    return <Component />;
+    return (
+      <Frame
+        className="active"
+        initialContent={initialContent}
+        mountTarget="#app-mount"
+      >
+        <Component />
+      </Frame>
+    );
     //return <div>We're on the CustomSpotify settings page.</div>;
   }
 }
