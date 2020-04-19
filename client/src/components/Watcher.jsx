@@ -3,9 +3,9 @@ import connectWithStore from "./connectWithStore";
 import Registrar from "../Registrar";
 import Frame from "react-frame-component";
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   lastRequestedPageUri: state.pages.lastRequestedPageUri,
-  pages: state.pages
+  pages: state.pages,
 });
 const initialContent = `
 <!doctype html>
@@ -46,4 +46,4 @@ class Watcher extends PureComponent {
   }
 }
 
-export default connectWithStore(CSMirror.getStore(), Watcher, mapStateToProps);
+export default connectWithStore(Mirror.getStore(), Watcher, mapStateToProps);

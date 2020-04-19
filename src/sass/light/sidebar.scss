@@ -1,5 +1,7 @@
 [dir] .sidebar,
-[dir] .sidebar .sidebar-navbar.sidebar-scroll-element {
+[dir] .sidebar .sidebar-navbar,
+[dir] .sidebar .sidebar-navbar.sidebar-scroll-element,
+[dir] .LeftSidebar__scroll-section {
   background-color: $bg-1;
 }
 
@@ -19,4 +21,13 @@
 }
 [dir] .LeftSidebarNewPlaylistButton__button {
   border-top-color: $border-color;
+}
+
+[dir] .sidebar #offline-global-progress {
+  background-color: $bg-2;
+  border-top: 1px solid $border-color;
+  color: $text-color;
+}
+[dir] .sidebar #offline-global-progress p {
+  background-color: $primary;
 }

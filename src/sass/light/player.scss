@@ -79,3 +79,102 @@
 [dir] .view-player {
   border-top-color: $border-color;
 }
+
+.view-player
+  .player-controls-container
+  .controls
+  .button-repeat.active.contextmenu-active,
+.view-player
+  .player-controls-container
+  .controls
+  .button-repeat.active:not(:disabled):hover,
+.view-player
+  .player-controls-container
+  .controls
+  .button-shuffle.active.contextmenu-active,
+.view-player
+  .player-controls-container
+  .controls
+  .button-shuffle.active:not(:disabled):hover,
+.view-player
+  .player-controls-container
+  .controls
+  .button-thumbs-down.active.contextmenu-active,
+.view-player
+  .player-controls-container
+  .controls
+  .button-thumbs-down.active:not(:disabled):hover,
+.view-player
+  .player-controls-container
+  .controls
+  .button-thumbs-up.active.contextmenu-active,
+.view-player
+  .player-controls-container
+  .controls
+  .button-thumbs-up.active:not(:disabled):hover {
+  color: $primary-light;
+}
+
+.view-player
+  .player-controls-container
+  .controls
+  .button-repeat.active:not(:disabled):hover:active,
+.view-player
+  .player-controls-container
+  .controls
+  .button-shuffle.active:not(:disabled):hover:active,
+.view-player
+  .player-controls-container
+  .controls
+  .button-thumbs-down.active:not(:disabled):hover:active,
+.view-player
+  .player-controls-container
+  .controls
+  .button-thumbs-up.active:not(:disabled):hover:active {
+  color: $primary-darker;
+}
+
+.view-player
+  .player-controls-container
+  .controls
+  .button-repeat.contextmenu-active,
+.view-player
+  .player-controls-container
+  .controls
+  .button-repeat:not(:disabled):hover,
+.view-player
+  .player-controls-container
+  .controls
+  .button-shuffle.contextmenu-active,
+.view-player
+  .player-controls-container
+  .controls
+  .button-shuffle:not(:disabled):hover,
+.view-player
+  .player-controls-container
+  .controls
+  .button-thumbs-down.contextmenu-active,
+.view-player
+  .player-controls-container
+  .controls
+  .button-thumbs-down:not(:disabled):hover,
+.view-player
+  .player-controls-container
+  .controls
+  .button-thumbs-up.contextmenu-active,
+.view-player
+  .player-controls-container
+  .controls
+  .button-thumbs-up:not(:disabled):hover {
+  color: $bg-6;
+}
+
+.view-player .player-controls-container .controls .next.contextmenu-active,
+.view-player .player-controls-container .controls .next:not(:disabled):hover,
+.view-player .player-controls-container .controls .previous.contextmenu-active,
+.view-player
+  .player-controls-container
+  .controls
+  .previous:not(:disabled):hover {
+  color: $primary-darker;
+}

@@ -3,6 +3,9 @@
   background-color: $primary;
   color: $text-color;
 }
+[dir] .RootlistItem--is-active:before {
+  background-color: $primary;
+}
 
 .OfflineIndicator--is-downloaded {
   color: $primary-dark;

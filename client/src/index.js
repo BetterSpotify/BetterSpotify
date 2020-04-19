@@ -6,7 +6,6 @@ import injectSidebar from "./injectSidebar";
 import injectWatcher from "./injectWatcher";
 import initScript from "./init";
 import Settings from "./pages/Settings.jsx";
-
 initScript();
 registerObserver();
 registerFrameObserver();
@@ -17,7 +16,7 @@ if (Util.inDev) {
   require("./development");
 }
 if (Util.inFrame) {
-  window.addEventListener("message", e => {
+  window.addEventListener("message", (e) => {
     try {
       let data = JSON.parse(e.data);
       if (data.event === "ME") {
@@ -32,8 +31,8 @@ if (Util.inFrame) {
     let url = "https://zlink.app.spotify.com/injector.js";
     if (Util.inDev) url = "http://localhost:8161/injector.js";
     fetch(url)
-      .then(res => res.text())
-      .then(js => {
+      .then((res) => res.text())
+      .then((js) => {
         Util.me = js;
         registerObserver();
       });

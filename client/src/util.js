@@ -2,7 +2,7 @@ const Util = {};
 
 Util.lastInjectedStyle = null;
 
-Util.injectStyles = styles => {
+Util.injectStyles = (styles) => {
   if (Util.lastInjectedStyle) Util.lastInjectedStyle.remove();
   let el = document.createElement("style");
   el.innerHTML = styles;

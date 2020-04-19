@@ -20,12 +20,17 @@ $base-light-text-color: #ffffff;
   }
 }
 
-$primary: #871ed7; // Purple
+//$primary: #871ed7; // Purple
 //$primary: #e1311a; // Red
+$primary: #b40028; // Candycane Red
+//$primary: #f573a0; // Candycane Pink
 //$primary: #0b76ff; // Blue
 //$primary: #3273dc; // Auttaja Blue
+//$primary: #7289da; // Blurple
 //$primary: #ffffff; // White (for contrast testing, text-colors should be set to the base dark text color.)
 //$primary: #000000; // Black (for contrast testing, text-colors should be set to the base light text color.)
+//$primary: #5294e2; // blue
+//$primary: #554488;
 $primary-darker: darken($primary, 10%);
 $primary-dark: darken($primary, 2%);
 $primary-light: lighten($primary, 10%);

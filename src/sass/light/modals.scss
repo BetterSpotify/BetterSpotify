@@ -1,0 +1,17 @@
+[dir] .Modal__content {
+  background-color: $bg-1;
+}
+
+.PlaylistAnnotationModal__title {
+  color: $text-color;
+}
+.PlaylistAnnotationModal__playlist-name-label,
+.PlaylistAnnotationModal__playlist-description-label {
+  color: $text-color-darker;
+}
+[dir] .PlaylistAnnotationModal__img {
+  background-color: $bg-2;
+}
+.PlaylistAnnotationModal__img-placeholder {
+  color: $text-color;
+}

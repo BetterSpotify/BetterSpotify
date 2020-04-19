@@ -6,17 +6,13 @@ export default class Settings extends PureComponent {
   render() {
     return (
       <div>
-        <Header title="CustomSpotify Settings" />
-        <Content
-          hasDivider={true}
-          dividerHeader="Modify your CustomSpotify settings here"
-        >
-          a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />
-          a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />
-          a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />
-          a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />
-          a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />
-        </Content>
+        fake and gay
+        <br /> a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a
+        <br />a<br />
+        a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />
+        a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />
+        a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />
+        a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />a<br />
       </div>
     );
   }

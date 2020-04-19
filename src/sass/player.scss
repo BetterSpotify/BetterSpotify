@@ -38,3 +38,21 @@
 [dir] .view-player .extra-controls-container .volumebar-container:hover .inner {
   background-color: $primary-dark;
 }
+
+[dir] .view-player .remote-playback-bar {
+  background-color: $primary-dark;
+}
+
+.view-player .remote-playback-bar p {
+  color: $text-color-dark;
+}
+
+.view-player .extra-controls-container .button-devices.active,
+.view-player .extra-controls-container .button-lyrics.active,
+.view-player .extra-controls-container .button-queue.active,
+.view-player .extra-controls-container .button-subtitles.active {
+  color: $primary-dark;
+}
+[dir] .view-player .remote-playback-bar .arrow {
+  border-bottom-color: $primary-dark;
+}

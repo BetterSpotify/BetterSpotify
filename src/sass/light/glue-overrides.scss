@@ -80,7 +80,30 @@ a {
   .glue-page-header__background {
   border-bottom-color: $border-color;
 }
-
+[dir] .tl-row.selected .tl-cell {
+  border-color: $border-color;
+}
+[dir] .tl-row.selected + .tl-row .tl-cell {
+  border-top-color: $border-color;
+}
+[dir] .focus .h-search,
+[dir] .h-search:focus {
+  background: $bg-5;
+  color: $text-color-darker;
+}
+[dir] .h-search {
+  background: $bg-3;
+  color: $text-color;
+}
+.h-search::placeholder {
+  color: $text-color !important;
+}
+.GlueSectionDivider__title {
+  color: $text-color-darker;
+}
+.h-search-wrapper:hover::before {
+  color: $text-color-darker;
+}
 [dir] #view-content > .embedded-app,
 [dir] #view-content > iframe {
   background-color: $bg-2;
@@ -98,12 +121,27 @@ a {
     32px 0 0 0 $bg-6;
 }
 
-.card-info-title a {
+.Card__info-title a {
   color: $text-color-darker;
 }
-.card-info-subtitle-description {
+.Card__info-subtitle-description {
   color: $text-color-lighter;
 }
-.card-info-subtitle-metadata {
+.Card__info-subtitle-metadata {
   color: rgba($text-color-lighter, 0.8);
+}
+
+.nav > li.active > a {
+  color: $text-color;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+  color: $text-color-darker;
+}
+.GlueDropdown {
+  color: $text-color;
+}
+[dir] .GlueDropdown {
+  background: $bg-6;
 }

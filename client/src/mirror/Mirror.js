@@ -11,7 +11,7 @@ export default class Mirror {
     if (!node) {
       return false;
     }
-    let reactInternalInstance = Object.keys(node).find(i =>
+    let reactInternalInstance = Object.keys(node).find((i) =>
       i.startsWith("__reactInternalInstance")
     );
     if (!reactInternalInstance) return false;
@@ -43,8 +43,9 @@ export default class Mirror {
     let filters = args || [];
     let index = 0;
     let predicate = (item, idx) => {
+      if (!item) return false;
       let lastArg = true;
-      filters.forEach(filter => {
+      filters.forEach((filter) => {
         if (!lastArg) return;
         lastArg = filter(item);
       });
@@ -57,12 +58,14 @@ export default class Mirror {
     return {
       index: index,
       moduleSource: mod,
-      module: Util.zlinkRequire(index)
+      module: Util.zlinkRequire(index),
     };
   }
   static getStore() {
-    return this.findModule(Filters.Exists(), Filters.Has.String("createStore"))
-      .default;
+    return this.findModule(
+      Filters.Exists(),
+      Filters.Has.String("window.__REDUX_DEVTOOLS_EXTENSION__")
+    ).default;
   }
   static findModule(...args) {
     return this._intFindModule(...args).module;
@@ -86,4 +89,5 @@ export default class Mirror {
     });
   }
 }
-window.CSMirror = Mirror;
+window.Mirror = Mirror;
+window.Filters = Filters;

@@ -1,9 +1,9 @@
 import Util from "./util";
 
 export default async () => {
-  let observer = new MutationObserver(mutations => {
-    mutations.forEach(mutation => {
-      mutation.addedNodes.forEach(addedNode => {
+  let observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+      mutation.addedNodes.forEach((addedNode) => {
         if (addedNode.nodeName === "IFRAME") {
           addedNode.onload = () => {
             const script = document.createElement("script");
@@ -13,7 +13,7 @@ export default async () => {
                 addedNode.contentWindow.postMessage(
                   JSON.stringify({
                     event: "ME",
-                    payload: Util.me
+                    payload: Util.me,
                   }),
                   "*"
                 );
@@ -21,7 +21,7 @@ export default async () => {
               script.onload = loaded;
               setTimeout(loaded, 500);
             }
-
+            if (!addedNode.contentDocument) return false;
             addedNode.contentDocument
               .getElementsByTagName("head")[0]
               .appendChild(script);
@@ -33,6 +33,6 @@ export default async () => {
   });
   observer.observe(document.body, {
     childList: true,
-    subtree: true
+    subtree: true,
   });
 };

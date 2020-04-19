@@ -15,3 +15,18 @@
 .tl-sort-desc::after {
   color: $primary-dark;
 }
+
+.TableCellSong--track-is-playing .TableCellSong__featuredArtist,
+.TableCellSong--track-is-playing .TableCellSong__text-truncator,
+.TableCellSong--track-is-playing .TableCellSong__track-name,
+.TableCellDuration--track-is-playing {
+  color: $primary;
+}
+
+[dir] .Button--style-green:not(:disabled).Button--is-strong-style,
+[dir] .Button--style-green:not(:disabled):hover {
+  background: $primary;
+}
+[dir] .Button--style-green:not(:disabled):hover:active {
+  background: $primary-dark;
+}

@@ -33,3 +33,12 @@
 [dir] .Button--style-green {
   background: $primary;
 }
+
+.Header__title-text-inner {
+  color: $text-color-darker;
+}
+
+[dir] .Header__top-bar,
+[dir] .glue-page-header__top-bar {
+  background: linear-gradient($bg-2, $bg-2 48px, transparent);
+}

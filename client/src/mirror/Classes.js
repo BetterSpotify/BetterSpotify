@@ -1,7 +1,7 @@
 const Sidebar = {
   LeftSidebar: "LeftSidebar",
   LeftSidebar__section: "LeftSidebar__section",
-
+  "LeftSidebar__scroll-section": "LeftSidebar__scroll-section",
   SidebarList: "SidebarList",
   SidebarList__title: "SidebarList__title",
   SidebarList__list: "SidebarList__list",
@@ -12,7 +12,7 @@ const Sidebar = {
   SidebarListItem__inner: "SidebarListItem__inner",
   SidebarListItem__link: "SidebarListItem__link",
   SidebarListItemLink: "SidebarListItemLink",
-  SidebarListItem__label: "SidebarListItem__label"
+  SidebarListItem__label: "SidebarListItem__label",
 };
 
 const Glue = {
@@ -38,23 +38,23 @@ const Glue = {
     "glue-page-header__sticky": "glue-page-header__sticky",
     "glue-page-header__sticky-inner": "glue-page-header__sticky-inner",
     "sticky-top": "sticky-top",
-    "glue-page-header__sticky-inner": "glue-page-header__sticky-inner"
+    "glue-page-header__sticky-inner": "glue-page-header__sticky-inner",
   },
   Content: {
     container: "container",
     "mixes-container": "mixes-container",
-    "app-content": "app-content"
+    "app-content": "app-content",
   },
   Row: {
     row: "row",
     "section-divider": "section-divider",
     "section-title": "section-title",
-    "standard-grid": "standard-grid"
+    "standard-grid": "standard-grid",
   },
-  container: "container"
+  container: "container",
 };
 
 export default {
   Sidebar,
-  Glue
+  Glue,
 };
